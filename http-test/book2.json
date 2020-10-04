@@ -1,0 +1,8 @@
+{
+  "isbn" : "Hatier Editions",
+  "title" : "Conjugaisons pour les nuls",
+  "author": {
+    "firstname" : "Albert",
+    "lastname" : "Langlais"
+  }
+}

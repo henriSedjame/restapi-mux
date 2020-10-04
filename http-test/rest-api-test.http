@@ -1,0 +1,24 @@
+POST localhost:8080/api/books
+Content-Type: application/json
+
+< book.json
+
+###
+
+GET localhost:8080/api/books
+Content-Type: application/json
+
+###
+
+GET localhost:8080/api/books/98498081
+Content-Type: application/json
+
+###
+PUT localhost:8080/api/books
+Content-Type: application/json
+
+< book3.json
+
+###
+DELETE localhost:8080/api/books/98498081
+Content-Type: application/json
