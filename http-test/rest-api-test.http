@@ -1,7 +1,7 @@
 POST localhost:8080/api/books
 Content-Type: application/json
 
-< book.json
+< book2.json
 
 ###
 
