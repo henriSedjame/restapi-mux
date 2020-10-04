@@ -6,15 +6,11 @@ import (
 	"github.com/hsedjame/restapi-mux/src/repository"
 )
 
-type Controller struct {
-	Router mux.Router
-}
+type Controller struct{}
 
-func NewController() *Controller {
+func (controller Controller) AddRoutes(router *mux.Router) {
 
 	routeHandlers := handlers.NewRouteHandlers(repository.NewBookRepositoryImpl())
-
-	router := mux.NewRouter()
 
 	// Define routes
 	router.HandleFunc("/api/books", routeHandlers.GetBooks).Methods("GET")
@@ -26,6 +22,4 @@ func NewController() *Controller {
 	router.HandleFunc("/api/books", routeHandlers.UpdateBook).Methods("PUT")
 
 	router.HandleFunc("/api/books/{id}", routeHandlers.DeleteBook).Methods("DELETE")
-
-	return &Controller{*router}
 }
